@@ -1,4 +1,4 @@
-\[!\[Java CI](https://github.com/Yumiko1113/calculator/actions/workflows/ci-calculator.yml/badge.svg)](https://github.com/Yumiko1113/calculator/actions/workflows/ci-calculator.yml)
+!\[Java CI](https://github.com/Yumiko1113/calculator/actions/workflows/ci-calculator.yml/badge.svg)
 
 
 
