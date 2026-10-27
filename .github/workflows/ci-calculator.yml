@@ -36,10 +36,11 @@ jobs:
           DOCKER_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Login to Docker Hub
-        uses: docker/login-action@v3
-        with:
-          username: ${{ vars.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+        env:
+          DOCKER_USER: ${{ vars.DOCKER_USERNAME }}
+          DOCKER_PASS: ${{ secrets.DOCKERHUB_TOKEN }}
+        run: echo "$DOCKER_PASS" | xargs | docker login -u "$DOCKER_USER" --password-stdin
+
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
